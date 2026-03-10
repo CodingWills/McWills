@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McWills Consulting | Market Entry & Talent Sourcing</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration and Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Nunito', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            indigo: '#4F46E5',
+                            cyan: '#06B6D4',
+                            amber: '#F59E0B',
+                            light: '#F8FAFC',
+                            dark: '#1E293B'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Base styles and utilities */
+        body {
+            background-color: #f4f7f6;
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Floating Animation for Illustrations */
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        .floating-delayed {
+            animation: float 6s ease-in-out infinite 3s;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Custom Input Styles */
+        .form-input {
+            transition: all 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #4F46E5;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+        }
+    </style>
+</head>
+<body class="text-brand-dark antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 bg-brand-light/90 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-12">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#home" class="text-2xl font-extrabold text-brand-indigo flex items-center gap-2">
+                        <!-- Logo Icon -->
+                        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="#06B6D4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        McWills
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="text-gray-600 hover:text-brand-indigo font-semibold transition-colors">About Us</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-indigo font-semibold transition-colors">Services</a>
+                    <a href="#portfolio" class="text-gray-600 hover:text-brand-indigo font-semibold transition-colors">Portfolio</a>
+                    <a href="#contact" class="bg-brand-indigo text-white px-6 py-2.5 rounded-full font-bold shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Book a Call</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden relative">
+        <!-- Background decorative blobs -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl z-0"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-brand-indigo/10 rounded-full blur-3xl z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-up">
+                    <div class="inline-block px-4 py-1.5 rounded-full bg-indigo-100 text-brand-indigo font-bold text-sm mb-6 border border-indigo-200">
+                        Market Entry & Talent Sourcing
+                    </div>
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-tight mb-6">
+                        Enter Markets With <span class="text-brand-indigo">Intelligence</span>, Not Guesswork.
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Most companies expand with incomplete information, generic outreach, and unvalidated contacts; that approach inevitably burns time and capital. We deliver decision-maker intelligence, competitive positioning, and structured outreach systems that convert market entry into measurable pipeline growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-brand-indigo text-white text-center px-8 py-3.5 rounded-full font-bold shadow-lg shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1 transition-all">
+                            Book a 20-Minute Call
+                        </a>
+                        <a href="#services" class="bg-white text-brand-indigo border-2 border-brand-indigo text-center px-8 py-3.5 rounded-full font-bold hover:bg-indigo-50 transition-all">
+                            Explore Services
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Hero Illustration -->
+                <div class="fade-up relative w-full h-auto flex justify-center floating">
+                    <svg viewBox="0 0 500 400" class="w-full max-w-lg" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="0" dy="10" stdDeviation="10" flood-opacity="0.1"/>
+                            </filter>
+                        </defs>
+                        <!-- Background Blob -->
+                        <path d="M120,350 C40,300 10,200 60,120 C110,40 250,10 350,60 C450,110 490,250 420,330 C350,410 200,400 120,350 Z" fill="#EEF2FF"/>
+                        <!-- Target -->
+                        <circle cx="250" cy="200" r="120" fill="#FFFFFF" filter="url(#shadow)"/>
+                        <circle cx="250" cy="200" r="90" fill="#E0E7FF"/>
+                        <circle cx="250" cy="200" r="60" fill="#4F46E5"/>
+                        <circle cx="250" cy="200" r="30" fill="#FFFFFF"/>
+                        <!-- Arrow -->
+                        <path d="M100,350 L240,210" stroke="#F59E0B" stroke-width="8" stroke-linecap="round" />
+                        <polygon points="260,190 225,205 245,225" fill="#F59E0B"/>
+                        <!-- Chart Window -->
+                        <rect x="280" y="80" width="160" height="120" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+                        <path d="M300,160 L330,130 L360,140 L400,100 L420,120" fill="none" stroke="url(#heroGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+                        <!-- Floating elements -->
+                        <circle cx="100" cy="100" r="15" fill="#06B6D4" class="floating-delayed"/>
+                        <circle cx="420" cy="280" r="25" fill="#F59E0B" class="floating"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark mb-4">Building a Brighter Tomorrow Today</h2>
+                <div class="w-24 h-1.5 bg-brand-cyan mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- About Illustration -->
+                <div class="order-2 lg:order-1 fade-up floating-delayed">
+                     <svg viewBox="0 0 400 300" class="w-full max-w-md mx-auto" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="50" y="50" width="300" height="200" rx="20" fill="#EEF2FF" />
+                        <circle cx="200" cy="150" r="80" fill="#FFFFFF" />
+                        <!-- Connection Nodes -->
+                        <circle cx="200" cy="150" r="30" fill="#4F46E5" />
+                        <circle cx="120" cy="100" r="20" fill="#06B6D4" />
+                        <circle cx="280" cy="100" r="20" fill="#06B6D4" />
+                        <circle cx="120" cy="200" r="20" fill="#06B6D4" />
+                        <circle cx="280" cy="200" r="20" fill="#F59E0B" />
+                        <!-- Lines -->
+                        <line x1="135" y1="110" x2="180" y2="135" stroke="#9CA3AF" stroke-width="3" stroke-dasharray="5,5"/>
+                        <line x1="265" y1="110" x2="220" y2="135" stroke="#9CA3AF" stroke-width="3" stroke-dasharray="5,5"/>
+                        <line x1="135" y1="190" x2="180" y2="165" stroke="#9CA3AF" stroke-width="3" stroke-dasharray="5,5"/>
+                        <line x1="265" y1="190" x2="220" y2="165" stroke="#9CA3AF" stroke-width="3" stroke-dasharray="5,5"/>
+                     </svg>
+                </div>
+                
+                <div class="order-1 lg:order-2 fade-up">
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Led by Manuel Wills, a professional with 10+ years supporting growth across emerging markets, our work sits at the intersection of research, partnerships, and go-to-market execution.
+                    </p>
+                    <div class="bg-brand-light rounded-2xl p-6 border border-gray-100 shadow-sm">
+                        <h3 class="text-xl font-bold text-brand-indigo mb-4 flex items-center gap-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            Who We Work With
+                        </h3>
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-cyan mt-1">→</span>
+                                <span>Startups and scale-ups planning structured expansion;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-cyan mt-1">→</span>
+                                <span>Companies looking to scout skilled, verified manpower;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-cyan mt-1">→</span>
+                                <span>Teams preparing for industry events and partnership outreach;</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-brand-cyan mt-1">→</span>
+                                <span>Companies successfully entering Africa and emerging markets.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark mb-4">Intelligence. Talent. Execution.</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">We combine intelligence, structured outreach, and manpower sourcing into a single growth framework.</p>
+                <div class="w-24 h-1.5 bg-brand-amber mx-auto rounded-full mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 fade-up">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center mb-6">
+                        <!-- Custom SVG Icon: Intelligence -->
+                        <svg class="w-8 h-8 text-brand-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Market Intelligence</h3>
+                    <p class="text-gray-600 mb-4 text-sm">We map competitive landscapes, identify growth signals, and validate demand before capital is deployed.</p>
+                    <div class="bg-indigo-50 text-brand-indigo font-bold text-xs py-2 px-3 rounded-lg inline-block">
+                        Up to 25% uncertainty reduction
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 fade-up" style="transition-delay: 100ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-cyan-50 flex items-center justify-center mb-6">
+                        <!-- Custom SVG Icon: Business Dev -->
+                        <svg class="w-8 h-8 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Business Development</h3>
+                    <p class="text-gray-600 mb-4 text-sm">From market entry to partnership expansion, we design disciplined outreach systems targeting verified decision-makers.</p>
+                    <div class="bg-cyan-50 text-brand-cyan font-bold text-xs py-2 px-3 rounded-lg inline-block">
+                        18% to 35% conversion increase
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 fade-up" style="transition-delay: 200ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-amber-50 flex items-center justify-center mb-6">
+                        <!-- Custom SVG Icon: Manpower -->
+                        <svg class="w-8 h-8 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">360° Manpower Sourcing</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Full-cycle talent sourcing from entry-level to senior leadership; integrating competitive mapping and rigorous screening.</p>
+                    <div class="bg-amber-50 text-amber-600 font-bold text-xs py-2 px-3 rounded-lg inline-block">
+                        Up to 40% faster time-to-hire
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300 fade-up" style="transition-delay: 300ms;">
+                    <div class="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center mb-6">
+                        <!-- Custom SVG Icon: Advisory -->
+                        <svg class="w-8 h-8 text-brand-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Strategic Advisory</h3>
+                    <p class="text-gray-600 mb-4 text-sm">Executive-level advisory supporting expansion, restructuring, and commercial optimization with precise accountability.</p>
+                    <div class="bg-indigo-50 text-brand-indigo font-bold text-xs py-2 px-3 rounded-lg inline-block">
+                        20% to 35% efficiency gains
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio / Impact Section -->
+    <section id="portfolio" class="py-20 bg-brand-indigo text-white relative overflow-hidden">
+        <!-- Abstract background pattern -->
+        <svg class="absolute top-0 left-0 w-full h-full opacity-10" xmlns="http://www.w3.org/2000/svg">
+            <pattern id="pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="#ffffff"/>
+            </pattern>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#pattern)"/>
+        </svg>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="fade-up">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold mb-6">Our Impact & Track Record</h2>
+                    <p class="text-indigo-100 text-lg mb-10 leading-relaxed">
+                        With experience contributing to major strategic B2B relationships and delivering enriched decision-maker profiles globally, we focus entirely on precision, credibility, and long-term positioning.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                            <h4 class="text-4xl font-extrabold text-brand-cyan mb-2">96%</h4>
+                            <p class="text-sm text-indigo-100">Client satisfaction rate across multiple global engagements.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+                            <h4 class="text-4xl font-extrabold text-brand-amber mb-2">$200M+</h4>
+                            <p class="text-sm text-indigo-100">Contributed to strategic B2B relationships.</p>
+                        </div>
+                        <div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20 sm:col-span-2">
+                            <h4 class="text-4xl font-extrabold text-white mb-2">10,000+</h4>
+                            <p class="text-sm text-indigo-100">Enriched decision-maker profiles delivered to our active clients globally.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fade-up">
+                    <div class="bg-white text-brand-dark rounded-3xl p-8 shadow-2xl">
+                        <h3 class="text-2xl font-bold mb-6">What We Execute</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-brand-indigo/10 p-3 rounded-full shrink-0">
+                                    <svg class="w-6 h-6 text-brand-indigo" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Intelligence</h4>
+                                    <p class="text-sm text-gray-500">Deep competitive landscape analysis, accurate positioning insights, and validated market signals.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-brand-cyan/10 p-3 rounded-full shrink-0">
+                                    <svg class="w-6 h-6 text-brand-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Access</h4>
+                                    <p class="text-sm text-gray-500">Validated decision-makers and top-tier talent lead databases ready for direct engagement.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-4 items-start">
+                                <div class="bg-brand-amber/10 p-3 rounded-full shrink-0">
+                                    <svg class="w-6 h-6 text-brand-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Execution</h4>
+                                    <p class="text-sm text-gray-500">Robust outreach systems, structured pipeline frameworks, and consistent follow-up logic.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 fade-up">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-dark mb-4">Turn Intelligence Into Advantage</h2>
+                <p class="text-lg text-gray-500">Book a Strategic Growth Consultation and discover where your next advantage lies.</p>
+            </div>
+
+            <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden fade-up">
+                <div class="flex flex-col md:flex-row">
+                    <!-- Form Side -->
+                    <div class="p-8 md:p-12 md:w-3/5">
+                        <form id="contactForm" class="space-y-6">
+                            <div id="formSuccess" class="hidden bg-green-50 text-green-700 p-4 rounded-xl border border-green-200 text-sm font-semibold mb-6">
+                                Thank you! Your message has been received, and we will contact you shortly.
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Full Name *</label>
+                                <input type="text" required class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white" placeholder="John Doe">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Email Address *</label>
+                                <input type="email" required class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white" placeholder="john@example.com">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Preferred Date *</label>
+                                <input type="date" required class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white text-gray-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">How can we help? *</label>
+                                <textarea required rows="4" class="form-input w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 focus:bg-white" placeholder="Tell us about your expansion goals..."></textarea>
+                            </div>
+
+                            <div class="flex items-center">
+                                <input id="terms" type="checkbox" required class="h-4 w-4 text-brand-indigo focus:ring-brand-indigo border-gray-300 rounded cursor-pointer">
+                                <label for="terms" class="ml-2 block text-sm text-gray-600 cursor-pointer">
+                                    I accept the Terms & Conditions.
+                                </label>
+                            </div>
+
+                            <button type="submit" class="w-full bg-brand-indigo text-white font-bold py-4 rounded-xl shadow-lg hover:bg-indigo-700 hover:shadow-xl transition-all duration-300 flex justify-center items-center gap-2">
+                                Book Consultation
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Decorative Side -->
+                    <div class="bg-indigo-50 md:w-2/5 p-8 flex flex-col justify-center items-center relative overflow-hidden">
+                        <!-- Illustration in Form -->
+                        <svg viewBox="0 0 200 200" class="w-full max-w-[200px] mb-8 floating relative z-10" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="100" cy="100" r="80" fill="#E0E7FF"/>
+                            <path d="M70,120 L100,90 L130,120" fill="none" stroke="#4F46E5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M100,150 L100,90" fill="none" stroke="#4F46E5" stroke-width="12" stroke-linecap="round"/>
+                            <circle cx="100" cy="50" r="15" fill="#06B6D4"/>
+                            <circle cx="150" cy="80" r="10" fill="#F59E0B"/>
+                            <circle cx="50" cy="80" r="10" fill="#F59E0B"/>
+                        </svg>
+                        
+                        <div class="text-center relative z-10">
+                            <h4 class="text-xl font-bold text-brand-indigo mb-2">Get in Touch</h4>
+                            <p class="text-sm text-gray-600">Let's see how we can add value to your organization; sustainable growth is built on intelligence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="#4F46E5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="text-xl font-bold text-white">McWills Consulting</span>
+                </div>
+                
+                <div class="flex space-x-6 text-sm font-semibold">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#about" class="hover:text-white transition-colors">About</a>
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+                </div>
+                
+                <div class="text-sm">
+                    © McWills Consulting 2026. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery Interactions -->
+    <script>
+        $(document).ready(function() {
+            // Smooth Scrolling for anchor links
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if(target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 70 // Adjust for sticky navbar
+                    }, 800, 'swing');
+                }
+            });
+
+            // Sticky Navbar and Scroll Reveal Elements
+            $(window).on('scroll', function() {
+                // Navbar transformation
+                if ($(window).scrollTop() > 50) {
+                    $('#navbar').addClass('shadow-md bg-white/95 py-2').removeClass('bg-brand-light/90 py-4');
+                } else {
+                    $('#navbar').removeClass('shadow-md bg-white/95 py-2').addClass('bg-brand-light/90 py-4');
+                }
+
+                // Scroll Reveal Logic
+                $('.fade-up').each(function() {
+                    var bottom_of_object = $(this).offset().top + 100;
+                    var bottom_of_window = $(window).scrollTop() + $(window).height();
+                    
+                    if(bottom_of_window > bottom_of_object) {
+                        $(this).addClass('visible');
+                    }
+                });
+            });
+
+            // Trigger scroll immediately to reveal elements already in viewport
+            $(window).trigger('scroll');
+
+            // Form Submission Simulation
+            $('#contactForm').on('submit', function(e) {
+                e.preventDefault();
+                var $btn = $(this).find('button[type="submit"]');
+                var originalText = $btn.html();
+                
+                // Show loading state
+                $btn.html('<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processing...');
+                $btn.prop('disabled', true);
+                
+                // Simulate network request
+                setTimeout(function() {
+                    $('#formSuccess').slideDown();
+                    $('#contactForm')[0].reset();
+                    $btn.html(originalText).prop('disabled', false);
+                    
+                    // Hide success message after 5 seconds
+                    setTimeout(function() {
+                        $('#formSuccess').slideUp();
+                    }, 5000);
+                }, 1500);
+            });
+        });
+    </script>
+</body>
+</html>
